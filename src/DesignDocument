@@ -4,20 +4,20 @@ Instance Variables:
     private int y1 -  Represents first y-coordinate
     private int x2 -  Represents second x-coordinate
     private int y2 - Represents second y-coordinate
-    private int newX -  represents the newly inputted x-value
+    private double newX -  represents the newly inputted x-value
 
 Constructors:
     public LinearEquation(int x1, int y1, int x2, int y2) - Accepts the x and y values for each corresponding coordinate point inputted
-    public LinearEquation(int newX) - Accepts the newly inputted x-value
+    public LinearEquation(double newX) - Accepts the newly inputted x-value
 
 Methods:
-    public double calcDeltaX()
+    public double calcDeltaX(int x1, int x2)
     - This method with find the difference of x-values
 
-    public double calcDeltaY()
+    public double calcDeltaY(int y1, y2)
     - This method will find the difference of the y-values
 
-    public double calcYInt()
+    public double calcYInt(int y1, int y2)
     - This method will solve for the Y-intercept by finding the difference between y1 and slope * x1
     - This method will return the Y-intercept as a double
 
@@ -51,6 +51,6 @@ EquationRunner.java
     Step 7: Pass the values into the constructor with 4 parameters
     Step 8: Print toString() method
     Step 9: Ask user to enter a random x value
-    Step 10: Initiate int newX and set it to the input
+    Step 10: Initiate double newX and set it to the input
     Step 11: Pass the value into the constructor with one parameter
     Step 12: Print the new Y-value
