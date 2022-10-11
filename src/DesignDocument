@@ -44,7 +44,7 @@ Methods:
 EquationRunner.java
     Step 1: Ask user to enter first coordinate point
     Step 2: Ask user to enter second coordinate point
-    Step 3: Initiate string variables 
+    Step 3: Initiate string variables firstPair and secondPair
     Step 4: Initiate int variables, x1, y1, x2, y2
     Step 5: Set x1 and x2 to integers: substring(1, index(,)) of respective coordinate points and Integer.parseInt()
     Step 6: Set y1 and y2 to integers: substring(index(,) + 1, length() - 1) of respective coordinate points and Integer.parseInt()

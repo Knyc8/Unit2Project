@@ -5,6 +5,8 @@ public class EquationRunner {
         Scanner s = new Scanner(System.in);
 
         System.out.println("Enter the first x-y coordinate point: ");
-        int x1 = s.nextInt();
+        String firstPair = s.nextLine();
+        System.out.println("Enter the second x-y coordinate point: ");
+        String secondPair = s.nextLine();
     }
 }
