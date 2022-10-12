@@ -17,10 +17,10 @@ public class EquationRunner {
         LinearEquation line = new LinearEquation(x1, y1, x2, y2);
         line.displayString();                                                                                           //prints the info in the console
 
-        System.out.print("Enter an x-value: ");                                                                          //Asks user for a new x-value
+        System.out.print("Enter an x-value: ");                                                                         //Asks user for a new x-value
         int newX = s.nextInt();
 
         LinearEquation point = new LinearEquation(newX);
-        point.calcY();                                                                       //prints new y-value from the new x-value
+        point.calcY();                                                                                                  //prints new y-value from the new x-value
     }
 }
