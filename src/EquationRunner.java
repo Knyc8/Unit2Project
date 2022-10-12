@@ -15,8 +15,12 @@ public class EquationRunner {
         int y2 = Integer.parseInt(secondPair.substring(secondPair.indexOf(",") + 1, firstPair.length() -1));            //finds the second y-value
 
         LinearEquation line = new LinearEquation(x1, y1, x2, y2);
-        System.out.println(line.calcDeltaY()/line.calcDeltaX());
-        System.out.println(line.displaySIForm());
-        System.out.println(line.calcDistance());
+        line.displayString();                                                                                           //prints the info in the console
+
+        System.out.print("Enter an x-value: ");                                                                          //Asks user for a new x-value
+        int newX = s.nextInt();
+
+        LinearEquation point = new LinearEquation(newX);
+        point.calcY();                                                                       //prints new y-value from the new x-value
     }
 }

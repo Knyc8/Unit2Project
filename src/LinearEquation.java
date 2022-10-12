@@ -21,34 +21,47 @@ public class LinearEquation {
     }
 
     //Methods
-    public int calcDeltaX()
+    public int calcDeltaX()     //calculates change of x
     {
         return x2 - x1;
     }
 
-    public int calcDeltaY()
+    public int calcDeltaY()     //calculates change of y
     {
         return y2-y1;
     }
 
-    public double calcYInt()
+    public double calcYInt()        //calculates y-intercept
     {
         return y1 - x1 * ((double)calcDeltaY() / calcDeltaX());
     }
 
-    public String displaySIForm()
+    public String displaySIForm()       //formats the previous methods into Slope Intercept form
     {
         return "y = " + calcDeltaY() + "/" + calcDeltaX() + "x + " + (int)calcYInt();
     }
 
-    public double calcDistance()
+    public double calcDistance()        //calculates the distance between the two points
     {
         return Math.sqrt(Math.pow(calcDeltaX(), 2) + Math.pow(calcDeltaY(), 2));
     }
 
-    public void displayString()
+    public void displayString()     //calls the previous methods and prints them
     {
-        System.out.println("First Pair: " + "(" + x1 + "," + y1 + ",");
-        sout
+        System.out.println("First Pair: " + "(" + x1 + "," + y1 + ")");
+        System.out.println("Second Pair: " + "(" + x2 + "," + y2 + ")");
+        System.out.println("Slope of line: " + (double)calcDeltaY()/calcDeltaX());
+        System.out.println("Y-intercept: " + calcYInt());
+        System.out.println("Slope intercept form: " + displaySIForm());
+        System.out.printf("Distance between points: %.2f", calcDistance());
+        System.out.println();
+    }
+
+    public void calcY()
+    {
+        //double newY = ((double)calcDeltaY() / calcDeltaX()) * newX + calcYInt();
+        //return newY;
+        System.out.println(newX);
+        System.out.println(calcDeltaY());
     }
 }
