@@ -20,8 +20,6 @@ public class EquationRunner {
         System.out.print("Enter an x-value: ");                                                                         //Asks user for a new x-value
         int newX = s.nextInt();
         line.findNewX(newX);
-
-        LinearEquation point = new LinearEquation(newX);
-        point.calcY(line.calcDeltaY(), line.calcDeltaX());                                                                                                  //prints new y-value from the new x-value
+        line.calcY(line.calcDeltaY(), line.calcDeltaX());                                                                                                  //prints new y-value from the new x-value
     }
 }
