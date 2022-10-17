@@ -7,12 +7,13 @@ public class LinearEquation {
     private double newX;
 
     //Constructors
-    public LinearEquation(int x1, int y1, int x2, int y2)
+    public LinearEquation(int x1, int y1, int x2, int y2, double newX)
     {
         this.x1 = x1;
         this.x2 = x2;
         this.y1 = y1;
-        this. y2 = y2;
+        this.y2 = y2;
+        this.newX = newX;
     }
 
     public LinearEquation(double newX)
@@ -57,11 +58,13 @@ public class LinearEquation {
         System.out.println();
     }
 
-    public void calcY()
+    public void findNewX(int num){
+        newX = num;
+    }
+
+    public void calcY(double deltaY, double deltaX)
     {
-        //double newY = ((double)calcDeltaY() / calcDeltaX()) * newX + calcYInt();
-        //return newY;
-        System.out.println(newX);
-        System.out.println(calcDeltaY());
+        double newY = (deltaY/deltaX) * newX + 1;
+        System.out.println(newY);
     }
 }

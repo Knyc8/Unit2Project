@@ -10,17 +10,18 @@ public class EquationRunner {
         String secondPair = s.nextLine();
 
         int x1 = Integer.parseInt(firstPair.substring(1, firstPair.indexOf(",")));                                      //finds the first x-value
-        int y1 = Integer.parseInt(firstPair.substring(firstPair.indexOf(",") + 1, firstPair.length() -1));              //find the first y-value
+        int y1 = Integer.parseInt(firstPair.substring(firstPair.indexOf(",") + 1, firstPair.length()-1));              //find the first y-value
         int x2 = Integer.parseInt(secondPair.substring(1, secondPair.indexOf(",")));                                    //finds the second x-value
-        int y2 = Integer.parseInt(secondPair.substring(secondPair.indexOf(",") + 1, firstPair.length() -1));            //finds the second y-value
+        int y2 = Integer.parseInt(secondPair.substring(secondPair.indexOf(",") + 1, secondPair.length() -1));            //finds the second y-value
 
-        LinearEquation line = new LinearEquation(x1, y1, x2, y2);
+        LinearEquation line = new LinearEquation(x1, y1, x2, y2, 0);
         line.displayString();                                                                                           //prints the info in the console
 
         System.out.print("Enter an x-value: ");                                                                         //Asks user for a new x-value
         int newX = s.nextInt();
+        line.findNewX(newX);
 
         LinearEquation point = new LinearEquation(newX);
-        point.calcY();                                                                                                  //prints new y-value from the new x-value
+        point.calcY(line.calcDeltaY(), line.calcDeltaX());                                                                                                  //prints new y-value from the new x-value
     }
 }

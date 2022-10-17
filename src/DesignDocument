@@ -7,8 +7,7 @@ Instance Variables:
     private double newX -  represents the newly inputted x-value
 
 Constructors:
-    public LinearEquation(int x1, int y1, int x2, int y2) - Accepts the x and y values for each corresponding coordinate point inputted
-    public LinearEquation(double newX) - Accepts the newly inputted x-value
+    public LinearEquation(int x1, int y1, int x2, int y2, double newX) - Accepts the x and y values for each corresponding coordinate point inputted
 
 Methods:
     public double calcDeltaX()
@@ -37,6 +36,9 @@ Methods:
     - Slope Intercept Form equation
     - Distance between points
 
+    public findNewX(int num)
+    - This value will change the variable newX to the newly inputted parameter.
+
     public double calcY()
     - This method will calculate the y value of a given x by substituting the x value into the slope intercept form
     - This method will return the new y value as a double
@@ -52,5 +54,5 @@ EquationRunner.java
     Step 8: Print toString() method
     Step 9: Ask user to enter a random x value
     Step 10: Initiate double newX and set it to the input
-    Step 11: Pass the value into the constructor with one parameter
+    Step 11: Pass the value using findNew() method
     Step 12: Print the new Y-value
