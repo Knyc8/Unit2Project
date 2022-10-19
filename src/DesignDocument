@@ -27,7 +27,7 @@ Methods:
     - This method will calculate the distance between the points using the methods calcDeltaX() and calcDeltaY()
     - This method will return the distance as a double
 
-    public void displayString()
+    public void toString()
     This method will call the methods above and display all relevant information about this
     instance including:
     - X and Y coordinate information

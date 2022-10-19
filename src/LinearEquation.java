@@ -47,24 +47,22 @@ public class LinearEquation {
         return Math.sqrt(Math.pow(calcDeltaX(), 2) + Math.pow(calcDeltaY(), 2));
     }
 
-    public void displayString()     //calls the previous methods and prints them
+    public String toString()     //calls the previous methods and returns a string
     {
-        System.out.println("First Pair: " + "(" + x1 + "," + y1 + ")");
-        System.out.println("Second Pair: " + "(" + x2 + "," + y2 + ")");
-        System.out.println("Slope of line: " + (double)calcDeltaY()/calcDeltaX());
-        System.out.println("Y-intercept: " + calcYInt());
-        System.out.println("Slope intercept form: " + displaySIForm());
-        System.out.printf("Distance between points: %.2f", calcDistance());
-        System.out.println();
+        String slope = String.valueOf((double)calcDeltaY()/calcDeltaX());
+        String yInt = String.valueOf(calcYInt());
+        String distance = String.format("%.2f", calcDistance());
+        return "First Pair: " + "(" + x1 + "," + y1 + ")\n" + "Second Pair: " + "(" + x2 + "," + y2 + ")\n" + "Slope of line: " + slope
+        + "\nY-intercept: " + yInt + "\nSlope intercept form: " + displaySIForm() + "\nDistance between points: " + distance + "\n";
     }
 
     public void findNewX(int num){
         newX = num;
     }
 
-    public void calcY(double deltaY, double deltaX)
+    public void calcY(double deltaY, double deltaX, double yInt)
     {
-        double newY = (deltaY/deltaX) * newX + 1;
-        System.out.println(newY);
+        double newY = (deltaY/deltaX) * newX + yInt;
+        System.out.println("Solved coordinate point is: " + newY);
     }
 }
