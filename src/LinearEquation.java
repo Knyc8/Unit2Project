@@ -53,7 +53,7 @@ public class LinearEquation {
         String yInt = String.valueOf(calcYInt());
         String distance = String.format("%.2f", calcDistance());
         return "First Pair: " + "(" + x1 + "," + y1 + ")\n" + "Second Pair: " + "(" + x2 + "," + y2 + ")\n" + "Slope of line: " + slope
-        + "\nY-intercept: " + yInt + "\nSlope intercept form: " + displaySIForm() + "\nDistance between points: " + distance + "\n";
+        + "\nY-intercept: " + yInt + "\nSlope intercept form: " + displaySIForm() + "\nDistance between points: " + distance;
     }
 
     public void findNewX(int num){
@@ -63,6 +63,6 @@ public class LinearEquation {
     public void calcY(double deltaY, double deltaX, double yInt)
     {
         double newY = (deltaY/deltaX) * newX + yInt;
-        System.out.println("Solved coordinate point is: " + newY);
+        System.out.println("Solved coordinate point is: " + "(" + newX + "," + newY + ")");
     }
 }
